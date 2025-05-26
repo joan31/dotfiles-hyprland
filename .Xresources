@@ -28,5 +28,5 @@
 *color15: #A6ADC8
 
 ! Cursor
-Xcursor.theme: Catppuccin-Mocha-Blue-Cursors
-Xcursor.size: 32
+!Xcursor.theme: Catppuccin-Mocha-Blue-Cursors
+!Xcursor.size: 32
