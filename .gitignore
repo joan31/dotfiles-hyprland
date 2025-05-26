@@ -3,6 +3,8 @@
 
 # But not these files/folders
 !.zshrc
+!LICENSE
+!README.md
 !.config/
 !.config/hyprland/
 !.gitignore
