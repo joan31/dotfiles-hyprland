@@ -14,5 +14,5 @@
 !.config/
 
 # Hyrpland
-!.config/hyprland/*
+!.config/hypr/*
 
