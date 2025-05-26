@@ -7,36 +7,37 @@
 !LICENSE
 !README.md
 
-
 ## CONFIGS
 !.config/
+!.local/
+!.local/share/
 
-# Shell
+# SHELL
 !.zshrc
 
-# Hyrpland
+# HYPRLAND
 !.config/hypr/
 !.config/hypr/*
 !.config/hypr/conf.d/*
 !.config/hypr/scripts/*
 
-# Waybar
+# WAYBAR
 !.config/waybar/
 !.config/waybar/*
 !.config/waybar/scripts/*
 !.config/waybar/themes/*
 
-# Mako
+# MAKO
 !.config/mako/
 !.config/mako/*
 !.config/mako/themes/*
 
-# Rofi
+# ROFI
 !.config/rofi/
 !.config/rofi/*
 !.config/rofi/themes/*
 
-# Foot
+# FOOT
 !.config/foot/
 !.config/foot/*
 !.config/foot/themes/*
@@ -45,7 +46,7 @@
 !.config/MangoHud/
 !.config/MangoHud/*
 
-# NWG-Look
+# NWG-LOOK
 !.config/nwg-look/
 !.config/nwg-look/*
 
@@ -72,9 +73,14 @@
 !.config/mpv/
 !.config/mpv/*
 
-# Swappy
+# SWAPPY
 !.config/swappy/
 !.config/swappy/*
+
+# ELECTRON
+!.config/electron-flags.conf
+!.config/electron13-flags.conf
+!.config/electron19-flags.conf
 
 # X11
 !.Xdefaults
@@ -82,9 +88,20 @@
 
 # FONTS
 !.fonts
+!.local/share/fonts/
+!.local/share/fonts/OTF/
+!.local/share/fonts/OTF/**
+!.local/share/fonts/TTF/
+!.local/share/fonts/TTF/**
 
 # ICONS
 !.icons
+!.local/share/icons/
+!.local/share/icons/**
 
 # THEMES
 !.themes
+!.local/share/themes/**
+
+### Ignore specific files
+*.uuid
