@@ -1,17 +1,18 @@
-# Ignore everything by default
+### Ignore everything by default
 *
 
-# But not these files/folders
-# Git
+### But not these files/folders
+## GIT
+!.gitignore
 !LICENSE
 !README.md
-!.gitignore
+
+
+## CONFIGS
+!.config/
 
 # Shell
 !.zshrc
-
-# Config
-!.config/
 
 # Hyrpland
 !.config/hypr/
@@ -43,3 +44,47 @@
 # MangoHud
 !.config/MangoHud/
 !.config/MangoHud/*
+
+# NWG-Look
+!.config/nwg-look/
+!.config/nwg-look/*
+
+# GTK
+!.gtkrc-2.0
+!.config/gtk-2.0/
+!.config/gtk-2.0/*
+!.config/gtk-3.0/
+!.config/gtk-3.0/*
+!.config/gtk-4.0/
+!.config/gtk-4.0/*
+!.config/xsettingsd/
+!.config/xsettingsd/*
+
+# QT
+!.config/qt5ct/
+!.config/qt5ct/*
+!.config/qt5ct/colors/*
+!.config/qt6ct/
+!.config/qt6ct/*
+!.config/qt6ct/colors/*
+
+# MPV
+!.config/mpv/
+!.config/mpv/*
+
+# Swappy
+!.config/swappy/
+!.config/swappy/*
+
+# X11
+!.Xdefaults
+!.Xresources
+
+# FONTS
+!.fonts
+
+# ICONS
+!.icons
+
+# THEMES
+!.themes
