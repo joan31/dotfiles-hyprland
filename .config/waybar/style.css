@@ -1,0 +1,244 @@
+@import "themes/tokyo-night-storm.css";
+
+* {
+	border: none;
+	border-radius: 6px;
+	/* `otf-font-awesome` is required to be installed for icons */
+	font-family: Symbols Nerd Font, SF Pro Display, Noto Sans CJK JP;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+button.text-button {
+	min-height: 24px;
+	min-width: 16px;
+}
+
+window#waybar {
+	background: shade(alpha(@backgrnd, 0.8), 1.0);
+	border-bottom: shade(alpha(@base, 0.8), 1.0);
+	color: @text;
+	transition-property: background-color;
+	transition-duration: .5s;
+	border-radius: 15px;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+workspaces {
+	border-radius: 15px 6px 6px 15px;
+}
+
+tooltip {
+	background: shade(alpha(@backgrnd, 0.8), 1.0);
+	border: 2px solid shade(alpha(@blue, 0.8), 1.0);
+}
+
+tooltip label {
+	color: @subtext;
+}
+
+#workspaces button {
+	padding: 0 5px;
+	background-color: transparent;
+	color: @text;
+	/* Use box-shadow instead of border so the text isn't offset */
+	box-shadow: inset 0 -3px transparent;
+	/* Avoid rounded borders under each workspace name */
+	border: none;
+	border-radius: 1px;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+	background: shade(alpha(@backgrnd, 0.8), 1.0);
+	box-shadow: inset 0 -3px @sky;
+	border-radius: 5px;
+	border: none;
+}
+
+#workspaces button.visible {
+	background-color: @surface;
+	box-shadow: inset 0 -3px @sky;
+	border-radius: 5px;
+	border: none;
+}
+
+#workspaces button.urgent {
+	background-color: shade(alpha(@pink, 0.6), 0.8);
+}
+
+#clock,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#gamemode {
+	padding: 0 10px;
+}
+
+#network,
+#bluetooth,
+#pulseaudio,
+#idle_inhibitor,
+#tray,
+#clock {
+	color: @white;
+}
+
+#window,
+#workspaces {
+	margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces { 
+	margin-left: 0;   
+} 
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+	margin-right: 0;
+}
+
+@keyframes blink {
+	to {
+		background-color: #ffffff;
+		color: #000000;
+	}
+}
+
+label:focus {
+	background-color: #000000;
+}
+
+#cpu {
+	color: @teal;
+}
+
+#cpu.warning {
+	color: @orange;
+}
+
+#cpu.critical {
+	color: @pink;
+}
+
+#memory {
+	color: @sapphire;
+}
+
+#memory.warning {
+	color: @orange;
+}
+
+#memory.critical {
+	color: @pink;
+}
+
+#disk {
+	color: @green;
+}
+
+#disk.warning {
+	color: @orange;
+}
+
+#disk.critical {
+	color: @pink;
+}
+
+#network {
+	margin: 0px 5px 0px 0px;
+}
+
+#bluetooth {
+	margin: 0px 5px 0px 0px;
+}
+
+#bluetooth.connected {
+	color: @blue;
+	margin: 0px 5px 0px 0px; 
+}
+
+#bluetooth.off {
+	color: @pink;
+	margin: 0px 5px 0px 0px; 
+}
+
+#pulseaudio {
+	margin: 0px 5px 0px 0px;
+}
+
+#temperature {
+	color: @yellow;
+}
+
+#temperature.critical {
+	color: @pink;
+}
+
+#tray menu {
+	background: shade(alpha(@backgrnd, 0.8), 1.0);
+	color: @text;
+	border: 2px solid shade(alpha(@blue, 0.8), 1.0);
+}
+
+#tray menu menuitem:hover {
+	background-color: shade(alpha(@mauve, 0.4), 1.0);
+	color: @text;
+	border-radius: 4px;
+	margin: 0px 2px;
+}
+
+#tray > .passive {
+	-gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+	-gtk-icon-effect: highlight;
+	color: @pinkred;
+}
+
+#idle_inhibitor {
+	margin: 0px 5px 0px 0px;
+}
+
+#gamemode {
+	color: @flamingo;
+}
+
+#custom-rightseparator {
+	color: rgba(67, 255, 100, 0);
+	padding: 0 1px;
+	font-size: 1px;
+	margin: 0px 3px 0px 1px;
+}
+
+#custom-deezer {
+	padding: 0 10px;
+	color: @mauve;
+}
+
+#custom-leftseparator {
+	color: rgba(67, 255, 100, 0);
+	padding: 0 1px;
+	font-size: 1px;
+	margin: 0px 1px 0px 3px;
+}
+
+#custom-middleseparator {
+	color: rgba(67, 255, 100, 0);
+	padding: 0 1px;
+	font-size: 1px;
+	margin: 0px 2px 0px 2px;
+}
+
+#custom-taskbarseparator {
+	color: rgba(67, 255, 100, 0);
+	padding: 0 1px;
+	font-size: 1px;	
+	margin: 0px 15px 0px 15px;
+}

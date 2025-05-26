@@ -1,0 +1,28 @@
+/*
+*
+* Tokyo Night Storm Palette
+* Maintenair Joan31
+*
+*/
+
+@define-color base	#1a1b26;
+@define-color backgrnd	#24283b;
+
+@define-color text	#c0caf5;
+@define-color subtext	#a9b1d6;
+
+@define-color surface	#737aa2;
+
+@define-color blue	#3d59a1;
+@define-color sapphire	#41a6b5;
+@define-color sky	#7dcfff;
+@define-color teal	#4fd6be;
+@define-color yellow	#ffc777;
+@define-color orange	#ff9e64;
+@define-color pinkred	#c53b53;
+@define-color pink	#ff007c;
+@define-color mauve	#bb9af7;
+@define-color flamingo	#ff757f;
+@define-color green	#9ece6a;
+
+@define-color white	#ffffff;

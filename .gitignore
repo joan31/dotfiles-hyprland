@@ -19,3 +19,27 @@
 !.config/hypr/conf.d/*
 !.config/hypr/scripts/*
 
+# Waybar
+!.config/waybar/
+!.config/waybar/*
+!.config/waybar/scripts/*
+!.config/waybar/themes/*
+
+# Mako
+!.config/mako/
+!.config/mako/*
+!.config/mako/themes/*
+
+# Rofi
+!.config/rofi/
+!.config/rofi/*
+!.config/rofi/themes/*
+
+# Foot
+!.config/foot/
+!.config/foot/*
+!.config/foot/themes/*
+
+# MangoHud
+!.config/MangoHud/
+!.config/MangoHud/*

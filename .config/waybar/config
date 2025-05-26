@@ -1,0 +1,180 @@
+{
+	"layer": "top", // Waybar at top layer
+	"output": "DP-1",
+	"position": "top", // Waybar position (top|bottom|left|right)
+	"height": 35, // Waybar height (to be removed for auto height)
+	"margin-top": 10, // Waybar top margin
+	"margin-left": 10, // Waybar left margin
+	"margin-right": 10, // Waybar right margin
+	"spacing": 4, // Gaps between modules (4px)
+	"modules-left": ["custom/leftseparator", "hyprland/workspaces", "custom/middleseparator", "custom/deezer"],
+	"modules-center": ["hyprland/window"],
+	"modules-right": ["gamemode", "cpu", "temperature", "memory", "disk", "custom/taskbarseparator", "network", "bluetooth", "pulseaudio", "idle_inhibitor", "tray", "clock", "custom/rightseparator"],
+
+	// Modules configuration
+	"hyprland/workspaces": {
+		"format": "{name}",
+		"sort-by-number": true,
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+		"activated": "",
+		"deactivated": ""
+		},
+		"on-click-right": "hyprlock",
+		"tooltip": true,
+		"tooltip-format-activated": "{status}",
+		"tooltip-format-deactivated": "{status}"
+	},
+	"hyprland/window": {
+		"format": "{title}",
+		"max-length": 50
+	},
+	"tray": {
+		"spacing": 5
+	},
+	"gamemode": {
+		"format": "{glyph}",
+		"format-alt": "{glyph} {count}",
+		"glyph":  "",
+		"hide-not-running": true,
+		"use-icon": false,
+		"icon-name": "input-gaming-symbolic",
+		"icon-spacing": 2,
+		"icon-size": 14,
+		"tooltip": true,
+		"tooltip-format": "Games running: {count}"
+	}, 
+	"clock": {
+		"format": " {:%H:%M}",
+		"format-alt": " {:%Y-%m-%d}",
+		"tooltip-format": "<span color='#74c7ec'><b><big>{:%Y %B}</big></b></span>\n<tt><small>{calendar}</small></tt>",
+		"calendar-weeks-pos": "left",
+		"today-format": "<span background='#cba6f7' color='#1e1e2e'><b>{}</b></span>",
+		"format-calendar": "<span color='#cdd6f4'><b>{}</b></span>",
+		"format-calendar-weeks": "<span color='#94e2d5'><b>{:%W} </b></span>",
+		"format-calendar-weekdays": "<span color='#f9e2af'><b>{}</b></span>",
+		"on-scroll": {
+			"calendar": 1
+		}
+	},
+	"cpu": {
+		"format": " {usage}%",
+		"states": {
+			"warning": 80,
+			"critical": 90
+		},        
+		"tooltip": true,
+		"on-click": "$TERM -e htop",
+		"on-click-right": "killall htop"
+	},
+	"memory": {
+		"format": " {percentage}%",
+		"states": {
+			"warning": 80,
+			"critical": 90
+		},
+		"tooltip": true,
+		"tooltip-format": "{used}GiB/{total}GiB",
+		"on-click": "$TERM -e btop",
+		"on-click-right": "killall btop"
+	},
+	"temperature": {
+		"hwmon-path-abs": "/sys/devices/platform/asus-ec-sensors/hwmon",
+		"input-filename": "temp2_input",
+		"critical-threshold": 80,
+		"format-critical": "{icon} {temperatureC}°C",
+		"format": "{icon} {temperatureC}°C",
+		"format-icons": ["", "", "", "", ""],
+		"tooltip": true
+	},
+	"disk": {
+		"format": " {percentage_used}%",
+		"states": {
+			"warning": 80,
+			"critical": 90
+		},
+		"on-click": "thunar",
+		"on-click-right": "killall thunar",
+		"path": "/",
+		"tooltip": true,
+		"tooltip-format": "{used}/{total}"
+	},
+	"network": {
+		"interval": 5,
+		"format-wifi": " {essid} {signalStrenght}%",
+		"format-ethernet": "",
+		"tooltip-format": "{ifname} {ipaddr}/{cidr} {gwaddr}",
+		"format-linked": " No IP",
+		"format-disconnected": "",
+		"format-alt": " {bandwidthUpOctets}  {bandwidthDownOctets}"
+	},
+	"bluetooth": {
+		"format": "",
+		"format-connected-battery": " {icon}",
+		"tooltip-format": "{controller_alias}\t{controller_address}\n{status}",
+		"tooltip-format-off": "{controller_alias}\t{controller_address}\n{status}",
+		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n{num_connections} {status}\n{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+		"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+		"format-icons": {
+			"default": [ "", "", "", "", ""]
+		},
+		"on-click": "$TERM -e bluetoothctl",
+		"on-click-right": "killall bluetoothctl",
+		"on-scroll-up": "bluetoothctl power on",
+		"on-scroll-down": "bluetoothctl power off",
+	},
+	"pulseaudio": {
+		"format": "{icon}",
+		"tooltip-format": "{icon} {volume}% {format_source}",
+		"format-bluetooth": " {icon}",
+		"format-bluetooth-muted": "",
+		"format-muted": "",
+		"format-source": " {volume}%",
+		"format-source-muted": "",
+		"ignored-sinks": ["Easy Effects Sink"],
+		"format-icons": {
+			"default": ["", "", ""]
+		},
+		"on-click": "$TERM -e pulsemixer",
+		"on-click-right": "killall pulsemixer",
+		"on-click-middle": "$HOME/.config/waybar/scripts/bar_volume.sh mute",
+		"on-scroll-up": "$HOME/.config/waybar/scripts/bar_volume.sh raise 1",
+		"on-scroll-down": "$HOME/.config/waybar/scripts/bar_volume.sh lower 1"
+	},
+	"custom/deezer": {
+		"exec": "$HOME/.config/waybar/scripts/mediaplayer.py --player chromium 2> /dev/null",
+		"exec-if": "pgrep -f deezer | head -n 1",
+		"format": " {}",
+		"return-type": "json",
+		"max-length": 40,
+		"on-click": "playerctl -p chromium.instance$(pgrep -f deezer | head -n 1) play-pause",
+		"on-click-right": "kill $(pgrep -f deezer | head -n 1)",
+		"on-scroll-up": "playerctl -p chromium.instance$(pgrep -f deezer | head -n 1) next",
+		"on-scroll-down": "playerctl -p chromium.instance$(pgrep -f deezer | head -n 1) previous",
+		"tooltip": false,
+		"escape": true
+	},
+	"custom/rightseparator": {
+		"format": "|",
+		"interval": "once",
+		"tooltip": false
+	},
+	"custom/leftseparator": {
+		"format": "|",
+		"interval": "once",
+		"tooltip": false
+	},
+	"custom/middleseparator": {
+		"format": "|",
+		"interval": "once",
+		"tooltip": false
+	},
+	"custom/taskbarseparator": {
+		"format": "|",
+		"interval": "once",
+		"tooltip": false
+	}
+}
