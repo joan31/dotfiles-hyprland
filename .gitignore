@@ -14,5 +14,8 @@
 !.config/
 
 # Hyrpland
+!.config/hypr/
 !.config/hypr/*
+!.config/hypr/conf.d/*
+!.config/hypr/scripts/*
 
