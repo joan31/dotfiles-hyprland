@@ -216,7 +216,7 @@ Create the following in `$HOME/.dotfiles/info/exclude` (or use a `.gitignore` if
 !.config/foot/*
 !.config/foot/themes/*
 
-# MangoHud
+# MANGOHUD
 !.config/MangoHud/
 !.config/MangoHud/*
 
@@ -275,6 +275,7 @@ Create the following in `$HOME/.dotfiles/info/exclude` (or use a `.gitignore` if
 
 # THEMES
 !.themes
+!.local/share/themes/
 !.local/share/themes/**
 
 ### Ignore specific files
