@@ -42,7 +42,7 @@
 !.config/foot/*
 !.config/foot/themes/*
 
-# MangoHud
+# MANGOHUD
 !.config/MangoHud/
 !.config/MangoHud/*
 
@@ -101,6 +101,7 @@
 
 # THEMES
 !.themes
+!.local/share/themes/
 !.local/share/themes/**
 
 ### Ignore specific files
