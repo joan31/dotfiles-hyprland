@@ -9,10 +9,10 @@ Personal dotfiles for my minimalist and keyboard-driven Wayland setup using **Hy
 ## 🧩 Features
 
 - 🚀 Wayland compositor: Hyprland
-- 🌈 Theming with Catppuccin
+- 🌈 Theming with [Sweet-Dark-v40](https://github.com/EliverLara/Sweet)
 - 🧱 Status bar: Waybar
-- 🖱️ Launcher: wofi / rofi-wayland
-- 🔊 Audio: PipeWire + pavucontrol
+- 🖱️ Launcher: rofi-wayland
+- 🔊 Audio: PipeWire
 - 🔧 System tools: mako, grim, slurp, swappy
 - 🎮 Gaming tweaks (Proton, MangoHUD, GameMode)
 
@@ -21,19 +21,102 @@ Personal dotfiles for my minimalist and keyboard-driven Wayland setup using **Hy
 ```bash
 dotfiles-hyprland/
 ├── .config/
-│   ├── hypr/
-│   │   ├── hyprland.conf
-│   │   └── ...
-│   ├── waybar/
+│   ├── MangoHud/
+│   │   └── MangoHud.conf
 │   ├── foot/
+│   │   ├── themes/
+│   │   │   └── sweet-mars
+│   │   └── foot.ini
+│   ├── gtk-2.0/
+│   │   └── gtkfilechooser.ini
+│   ├── gtk-3.0/
+│   │   ├── gtk.css
+│   │   └── settings.ini
+│   ├── gtk-4.0/
+│   │   ├── gtk.css
+│   │   └── settings.ini
+│   ├── hypr/
+│   │   ├── conf.d/
+│   │   │   ├── 00-environment.conf
+│   │   │   ├── 01-variables.conf
+│   │   │   ├── 02-behaviours.conf
+│   │   │   ├── 03-aesthetic.conf
+│   │   │   ├── 04-input.conf
+│   │   │   ├── 05-output.conf
+│   │   │   ├── 06-workspaces.conf
+│   │   │   ├── 07-keybindings.conf
+│   │   │   ├── 08-rules.conf
+│   │   │   └── 09-autostart.conf
+│   │   ├── scripts/
+│   │   │   ├── control_volume.sh
+│   │   │   ├── monitor_switch.sh
+│   │   │   ├── screenshot_area.sh
+│   │   │   └── screenshot_monitor.sh
+│   │   ├── hypridle.conf
+│   │   ├── hyprland.conf
+│   │   ├── hyprlock.conf
+│   │   └── hyprlock.png
+│   ├── mako/
+│   │   ├── themes/
+│   │   │   └── tokyo-night-storm.css
+│   │   └── config
+│   ├── mpv/
+│   │   ├── input.conf
+│   │   └── mpv.conf
+│   ├── nwg-look/
+│   │   └── config
+│   ├── qt5ct/
+│   │   ├── colors/
+│   │   │   └── Sweet.conf
+│   │   └── qt5ct.conf
+│   ├── qt6ct/
+│   │   ├── colors/
+│   │   │   └── Sweet.conf
+│   │   └── qt6ct.conf
 │   ├── rofi/
-│   └── ...
+│   │   ├── themes/
+│   │   │   └── tokyo-night-storm.rasi
+│   │   └── config.rasi
+│   ├── swappy/
+│   │   └── config
+│   ├── waybar/
+│   │   ├── scripts/
+│   │   │   ├── bar_volume.sh
+│   │   │   └── mediaplayer.py
+│   │   ├── themes/
+│   │   │   └── tokyo-night-storm.css
+│   │   ├── config
+│   │   └── style.css
+│   ├── xsettingsd/
+│   │   └── xsettingsd.conf
+│   ├── electron-flags.conf
+│   ├── electron13-flags.conf
+│   └── electron19-flags.conf
 ├── .local/
 │   ├── bin/
 │   └── share/
+│       ├── fonts/
+│       │   ├── OTF/
+│       │   │   └── ...
+│       │   └── TTF/
+│       │   │   └── ...
+│       ├── icons/
+│       │   └── ...
+│       └── themes/
+│           └── ...
+├── Pictures/
+│   ├── Screenshots/
+│   └── Wallpapers/
 │       └── ...
-├── Pictures/Wallpapers
-├── install.sh
+├── .Xdefaults
+├── .Xresources
+├── .fonts/
+├── .gitignore
+├── .gtkrc-2.0
+├── .icons
+├── .themes/
+├── .zshrc
+├── LICENSE
 └── README.md
 ```
 
@@ -70,14 +153,113 @@ To avoid tracking all files in your `$HOME`, configure Git to ignore everything 
 Create the following in `$HOME/.dotfiles/info/exclude` (or use a `.gitignore` if preferred):
 
 ```gitignore
+### Ignore everything by default
 *
+
+### But not these files/folders
+## GIT
+!.gitignore
+!LICENSE
+!README.md
+
+## CONFIGS
 !.config/
-!.config/hypr/
-!.config/waybar/
-!.config/rofi/
-!.config/mako/
-!.bashrc
+!.local/
+!.local/share/
+
+# SHELL
 !.zshrc
+
+# HYPRLAND
+!.config/hypr/
+!.config/hypr/*
+!.config/hypr/conf.d/*
+!.config/hypr/scripts/*
+
+# WAYBAR
+!.config/waybar/
+!.config/waybar/*
+!.config/waybar/scripts/*
+!.config/waybar/themes/*
+
+# MAKO
+!.config/mako/
+!.config/mako/*
+!.config/mako/themes/*
+
+# ROFI
+!.config/rofi/
+!.config/rofi/*
+!.config/rofi/themes/*
+
+# FOOT
+!.config/foot/
+!.config/foot/*
+!.config/foot/themes/*
+
+# MangoHud
+!.config/MangoHud/
+!.config/MangoHud/*
+
+# NWG-LOOK
+!.config/nwg-look/
+!.config/nwg-look/*
+
+# GTK
+!.gtkrc-2.0
+!.config/gtk-2.0/
+!.config/gtk-2.0/*
+!.config/gtk-3.0/
+!.config/gtk-3.0/*
+!.config/gtk-4.0/
+!.config/gtk-4.0/*
+!.config/xsettingsd/
+!.config/xsettingsd/*
+
+# QT
+!.config/qt5ct/
+!.config/qt5ct/*
+!.config/qt5ct/colors/*
+!.config/qt6ct/
+!.config/qt6ct/*
+!.config/qt6ct/colors/*
+
+# MPV
+!.config/mpv/
+!.config/mpv/*
+
+# SWAPPY
+!.config/swappy/
+!.config/swappy/*
+
+# ELECTRON
+!.config/electron-flags.conf
+!.config/electron13-flags.conf
+!.config/electron19-flags.conf
+
+# X11
+!.Xdefaults
+!.Xresources
+
+# FONTS
+!.fonts
+!.local/share/fonts/
+!.local/share/fonts/OTF/
+!.local/share/fonts/OTF/**
+!.local/share/fonts/TTF/
+!.local/share/fonts/TTF/**
+
+# ICONS
+!.icons
+!.local/share/icons/
+!.local/share/icons/**
+
+# THEMES
+!.themes
+!.local/share/themes/**
+
+### Ignore specific files
+*.uuid
 ```
 
 This will:
@@ -96,7 +278,7 @@ This will:
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
 
-- Always run Git commands with `dotfiles`:
+- Always run Git commands with `dotfiles`, example:
 ```bash
 dotfiles status
 dotfiles add .config/hypr
