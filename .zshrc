@@ -25,6 +25,9 @@ then
 
 	# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 	[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+	# Aliases
+	alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 else
 	# Path oh-my-zsh installation
 	export ZSH="$HOME/.local/share/oh-my-zsh"
@@ -40,5 +43,6 @@ else
 	source $ZSH/oh-my-zsh.sh
 
 	# Aliases
+	alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 	alias nvim="XDG_CONFIG_HOME= /usr/bin/nvim"
 fi
