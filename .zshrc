@@ -1,48 +1,77 @@
-if [[ "$TERM" != 'linux' ]]
-then
+# Show system info with fastfetch if running under a graphical environment
+if [[ -n $DISPLAY || -n $WAYLAND_DISPLAY ]]; then
 	fastfetch
+fi
 
-	# Enable Powerlevel10k instant prompt
+# Path to oh-my-zsh installation
+export ZSH="$HOME/.local/share/oh-my-zsh"
+
+# Enable timestamp in command history (visible with `history`)
+HIST_STAMPS="yyyy-mm-dd"
+
+# Git alias to manage dotfiles using a bare repository setup
+if [ -d "$HOME/.dotfiles" ]; then
+	alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+fi
+
+# Terminal-specific configuration
+if [[ "$TERM" == 'linux' ]]; then
+	# Use a lightweight theme for TTY environments
+	ZSH_THEME="philips"
+
+	# Load minimal plugins in TTY
+	plugins=(archlinux git)
+
+	# Prevent Neovim from reading graphical config paths in TTY
+	alias nvim="XDG_CONFIG_HOME= /usr/bin/nvim"
+else
+	# Enable Powerlevel10k instant prompt for faster shell startup
 	if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
 		source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 	fi
 
-	# Path oh-my-zsh installation
-	export ZSH="$HOME/.local/share/oh-my-zsh"
-
-	# Theme
+	# Set Powerlevel10k as the ZSH theme
 	ZSH_THEME="powerlevel10k/powerlevel10k"
 
-	# Command execution time stamp shown in the history command output
-	HIST_STAMPS="yyyy-mm-dd"
-
-	# Additional completion definitions (zsh-completions plugin)
+	# Add zsh-completions to function path (enables extra completions)
 	fpath+=${ZSH_CUSTOM:-${ZSH:-~/.local/share/oh-my-zsh}/custom}/plugins/zsh-completions/src
 
+	# Load plugins for development and usability
 	plugins=(archlinux git zsh-autosuggestions zsh-syntax-highlighting)
 
-	source $ZSH/oh-my-zsh.sh
-
-	# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+	#  Load Powerlevel10k configuration if present or to customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 	[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+fi
 
-	# Aliases
-	alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-else
-	# Path oh-my-zsh installation
-	export ZSH="$HOME/.local/share/oh-my-zsh"
+# Initialize oh-my-zsh framework and plugins
+source "$ZSH/oh-my-zsh.sh"
 
-	# Theme
-	ZSH_THEME="philips"
+# Interactive prompt to optionally launch Hyprland on TTY1
+if [[ "$XDG_VTNR" == "1" && -z "$DISPLAY" && -z "$WAYLAND_DISPLAY" ]]; then
+	while true; do
+		clear
+		echo
+		echo "/─────────────────────────────\\"
+		echo "│ Start graphical session ?   │"
+		echo "│ [H]yprland  [S]hell         │"
+		echo "\\─────────────────────────────/"
+		read -k1 "choice?Enter your choice: "
+		echo
 
-	# Command execution time stamp shown in the history command output
-	HIST_STAMPS="yyyy-mm-dd"
-
-	plugins=(archlinux git)
-
-	source $ZSH/oh-my-zsh.sh
-
-	# Aliases
-	alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-	alias nvim="XDG_CONFIG_HOME= /usr/bin/nvim"
+		case $choice in
+			h|H)
+				echo "-> Launching Hyprland..."
+				exec hyprland
+				;;
+			s|S|'')
+				echo "-> Staying in shell."
+				echo "/!\\  To start the window manager manually, type: hyprland"
+				break
+				;;
+			*)
+				echo ":( Invalid input. Please press H to start Hyprland or S to stay in shell."
+				sleep 2
+				;;
+		esac
+	done
 fi
