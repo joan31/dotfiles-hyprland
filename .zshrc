@@ -48,6 +48,8 @@ source "$ZSH/oh-my-zsh.sh"
 
 # Interactive prompt to optionally launch Hyprland on TTY1
 if [[ "$XDG_VTNR" == "1" && -z "$DISPLAY" && -z "$WAYLAND_DISPLAY" ]]; then
+	trap '' SIGINT  # Disable Ctrl+C
+
 	while true; do
 		clear
 		echo
@@ -74,4 +76,6 @@ if [[ "$XDG_VTNR" == "1" && -z "$DISPLAY" && -z "$WAYLAND_DISPLAY" ]]; then
 				;;
 		esac
 	done
+
+	trap - SIGINT  # Re-enable Ctrl+C
 fi
