@@ -1,8 +1,10 @@
-# ✨ hyprland Dotfiles
+# ✨ Hyprland Dotfiles
 
-![Hyprland](https://img.shields.io/badge/WM-Hyprland-blueviolet?logo=wayland&style=flat-square)
-![Arch Linux](https://img.shields.io/badge/Distro-Arch-blue?logo=arch-linux&style=flat-square)
-![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)
+![Linux](https://img.shields.io/badge/OS-Linux-black?style=flat-square&logo=linux&logoColor=white)
+![Arch Linux](https://img.shields.io/badge/Distro-Arch-blue?style=flat-square&logo=arch-linux)
+![Wayland](https://img.shields.io/badge/Display%20Server-Wayland-yellow?style=flat-square&logo=wayland)
+![Hyprland](https://img.shields.io/badge/WM-Hyprland-blueviolet?style=flat-square&logo=hyprland)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square&logo=open-source-initiative)](LICENSE)
 
 Personal dotfiles for my minimalist and keyboard-driven Wayland setup using **Hyprland**.
 
