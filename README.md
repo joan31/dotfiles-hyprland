@@ -6,6 +6,15 @@
 
 Personal dotfiles for my minimalist and keyboard-driven Wayland setup using **Hyprland**.
 
+## 📌 Table of Contents
+
+- [✨ Features](#-features)
+- [🗃️ Structure](#️-structure)
+- [💡 Philosophy](#-philosophy)
+- [🚀 Setup](#-setup)
+- [⚙️ Dotfiles Management](#️-dotfiles-management)
+- [📄 License](#-license)
+
 ## 🧩 Features
 
 - 🚀 Wayland compositor: Hyprland
@@ -17,6 +26,9 @@ Personal dotfiles for my minimalist and keyboard-driven Wayland setup using **Hy
 - 🎮 Gaming tweaks (Proton, MangoHUD, GameMode)
 
 ## 🗃️ Structure
+
+<details>
+<summary>📁 <code>dotfiles-hyprland/</code> (click to expand)</summary>
 
 ```bash
 dotfiles-hyprland/
@@ -120,6 +132,8 @@ dotfiles-hyprland/
 └── README.md
 ```
 
+</details>
+
 ## 💡 Philosophy
 
 - Declarative, clean configs
@@ -127,7 +141,7 @@ dotfiles-hyprland/
 - Blur, transparency, and animations
 - Fast boot, lightweight, focused
 
-## 🚀 Usage
+## 🚀 Setup
 
 These dotfiles are managed with Git using the **bare repo** method. See below for setup instructions.
 
@@ -151,6 +165,9 @@ dotfiles checkout
 To avoid tracking all files in your `$HOME`, configure Git to ignore everything by default and **only include what you explicitly allow**:
 
 Create the following in `$HOME/.dotfiles/info/exclude` (or use a `.gitignore` if preferred):
+
+<details>
+<summary>📄 <code>.gitignore</code> content (click to expand)</summary>
 
 ```gitignore
 ### Ignore everything by default
@@ -261,6 +278,8 @@ Create the following in `$HOME/.dotfiles/info/exclude` (or use a `.gitignore` if
 ### Ignore specific files
 *.uuid
 ```
+
+</details>
 
 This will:
 
