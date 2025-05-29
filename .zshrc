@@ -6,10 +6,10 @@ menu_start() {
 		while true; do
 			clear
 			echo
-			echo "/─────────────────────────────\\"
+			echo "┌─────────────────────────────┐"
 			echo "│ Start graphical session ?   │"
 			echo "│ [H]yprland  [S]hell         │"
-			echo "\\─────────────────────────────/"
+			echo "└─────────────────────────────┘"
 			read -k1 "choice?Enter your choice: "
 			if [[ $? -ne 0 ]]; then
 				echo
@@ -26,11 +26,11 @@ menu_start() {
 					;;
 				s|S|'')
 					echo "-> Staying in shell."
-					echo "/!\\ To launch Hyprland manually, type: hyprland"
+					echo "[i] To launch Hyprland manually, type: hyprland"
 					break
 					;;
 				*)
-					echo ":( Invalid input. Press H or S."
+					echo "[x] Invalid input. Press H or S."
 					sleep 2
 					;;
 			esac
