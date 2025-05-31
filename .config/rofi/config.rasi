@@ -12,4 +12,4 @@ configuration {
 	sidebar-mode: true;
 }
 
-@theme "./themes/tokyo-night-storm.rasi"
+@theme "./themes/sweet-dark.rasi"
