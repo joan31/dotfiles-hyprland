@@ -11,10 +11,10 @@ Personal dotfiles for my minimalist and keyboard-driven Wayland setup using **Hy
 ## 📌 Table of Contents
 
 - [🧩 Features](#-features)
-- [🗃️ Structure](#🗃️-structure)
+- [🗃️ Structure](#️-structure)
 - [💡 Philosophy](#-philosophy)
 - [🚀 Setup](#-setup)
-- [⚙️ Dotfiles Management](# -dotfiles-management)
+- [⚙️ Dotfiles Management](#️-dotfiles-management)
 - [📝 To-Do List](#-to-do-list)
 - [📄 License](#-license)
 
