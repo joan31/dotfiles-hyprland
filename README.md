@@ -322,3 +322,7 @@ This repository is licensed under the [MIT License](LICENSE).
 You are free to use, modify, and distribute this configuration.
 
 > Inspired by the dotfiles management strategy popularized by [@streakycube](https://www.atlassian.com/git/tutorials/dotfiles) and others in the Linux community.
+
+---
+
+🗂️ See also: [TODO.md](TODO.md)
