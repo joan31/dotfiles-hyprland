@@ -317,9 +317,9 @@ source ~/.zsshrc
 
 ---
 
-# 📝 To-Do List
+## 📝 To-Do List
 
-## 🎨 Theming
+### 🎨 Theming
 
 List of ongoing tasks to theme the Hyprland environment with the **Sweet Dark** look.
 
