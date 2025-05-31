@@ -10,11 +10,12 @@ Personal dotfiles for my minimalist and keyboard-driven Wayland setup using **Hy
 
 ## 📌 Table of Contents
 
-- [✨ Features](#-features)
-- [🗃️ Structure](#️-structure)
+- [🧩 Features](#-features)
+- [🗃️ Structure](#-structure)
 - [💡 Philosophy](#-philosophy)
 - [🚀 Setup](#-setup)
-- [⚙️ Dotfiles Management](#️-dotfiles-management)
+- [⚙️ Dotfiles Management](#-dotfiles-management)
+- [📝 TODO](#-todo)
 - [📄 License](#-license)
 
 ## 🧩 Features
@@ -316,13 +317,22 @@ source ~/.zsshrc
 
 ---
 
+# 📝 TODO
+
+## 🎨 Theming
+
+List of ongoing tasks to theme the Hyprland environment with the **Sweet Dark** look.
+
+- [ ] Apply Sweet Dark theme to **hyprlock**
+- [ ] Apply Sweet Dark theme to **mako**
+- [ ] Apply Sweet Dark theme to **rofi**
+- [ ] Apply Sweet Dark theme to **waybar**
+
+---
+
 ## 📄 License
 
 This repository is licensed under the [MIT License](LICENSE).  
 You are free to use, modify, and distribute this configuration.
 
 > Inspired by the dotfiles management strategy popularized by [@streakycube](https://www.atlassian.com/git/tutorials/dotfiles) and others in the Linux community.
-
----
-
-🗂️ See also: [TODO.md](TODO.md)
