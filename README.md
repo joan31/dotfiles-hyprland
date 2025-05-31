@@ -10,13 +10,13 @@ Personal dotfiles for my minimalist and keyboard-driven Wayland setup using **Hy
 
 ## 📌 Table of Contents
 
-- [🧩 Features](#-features)
-- [🗃️ Structure](#-structure)
-- [💡 Philosophy](#-philosophy)
-- [🚀 Setup](#-setup)
-- [⚙️ Dotfiles Management](#-dotfiles-management)
-- [📝 TODO](#-todo)
-- [📄 License](#-license)
+- [🧩 Features](#features)
+- [🗃️ Structure](#structure)
+- [💡 Philosophy](#philosophy)
+- [🚀 Setup](#setup)
+- [⚙️ Dotfiles Management](#dotfiles-management)
+- [📝 To-Do List](#to-do-list)
+- [📄 License](#license)
 
 ## 🧩 Features
 
@@ -317,7 +317,7 @@ source ~/.zsshrc
 
 ---
 
-# 📝 TODO
+# 📝 To-Do List
 
 ## 🎨 Theming
 
