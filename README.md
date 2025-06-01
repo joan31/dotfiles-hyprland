@@ -325,7 +325,7 @@ List of ongoing tasks to theme the Hyprland environment with the **Sweet Dark** 
 
 - [x] Apply Sweet Dark theme to **hyprlock**
 - [x] Apply Sweet Dark theme to **mako**
-- [ ] Apply Sweet Dark theme to **rofi**
+- [x] Apply Sweet Dark theme to **rofi**
 - [ ] Apply Sweet Dark theme to **waybar**
 
 ---

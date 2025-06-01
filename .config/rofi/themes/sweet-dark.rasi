@@ -4,8 +4,8 @@
 	font: "Symbols Nerd Font, SF Pro Display 12";
 }
 
-element-text, element-icon , mode-switcher {
-	text-color: #c0caf5;
+element-text, element-icon, mode-switcher {
+	text-color: #c3c7d1;
 }
 
 window {
@@ -16,19 +16,19 @@ window {
 }
 
 mainbox {
-	background-color: #24283bb3;
+	background-color: #1e1e2ecc;
 }
 
 inputbar {
-	children: [prompt,entry];
+	children: [prompt, entry];
 	border-radius: 5px;
 	padding: 2px;
 }
 
 prompt {
-	background-color: #7aa2f7b3;
+	background-color: #bb9af7b3;
 	padding: 6px;
-	text-color: #24283b;
+	text-color: #1a1e21;
 	border-radius: 3px;
 	margin: 20px 0px 0px 20px;
 }
@@ -36,7 +36,7 @@ prompt {
 entry {
 	padding: 6px;
 	margin: 20px 0px 0px 10px;
-	text-color: #c0caf5;
+	text-color: #c3c7d1;
 }
 
 listview {
@@ -56,21 +56,21 @@ element-icon {
 }
 
 element selected {
-	background-color: #bb9af7b3;
+	background-color: #7dcfffb3;
 	border-radius: 5px;
 }
 
 element-text selected {
-	text-color: #24283b;	
+	text-color: #1e1e2e;
 }
 
 button {
 	padding: 10px;
-	text-color: #a9b1d6;
-	vertical-align: 0.5; 
+	text-color: #b4f9f8;
+	vertical-align: 0.5;
 	horizontal-align: 0.5;
 }
 
 button selected {
-	text-color: #7aa2f7;
+	text-color: #bb9af7;
 }
