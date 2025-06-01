@@ -324,7 +324,7 @@ source ~/.zsshrc
 List of ongoing tasks to theme the Hyprland environment with the **Sweet Dark** look.
 
 - [x] Apply Sweet Dark theme to **hyprlock**
-- [ ] Apply Sweet Dark theme to **mako**
+- [x] Apply Sweet Dark theme to **mako**
 - [ ] Apply Sweet Dark theme to **rofi**
 - [ ] Apply Sweet Dark theme to **waybar**
 

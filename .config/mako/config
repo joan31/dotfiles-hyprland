@@ -33,22 +33,22 @@ output=DP-1
 layer=top
 anchor=top-right
 
-# COLORS TOKYO NIGHT STORM
-background-color=#24283bcc
-text-color=#a9b1d6
-border-color=#b4f9f8e6
-progress-color=over #414868
+# COLORS SWEET DARK
+background-color=#1e1e2ecc
+text-color=#c3c7d1
+border-color=#bb9af7e6
+progress-color=over #7dcfffe6
 
 # CRITERIA
 [urgency=low]
-border-color=#9aa5cee6
+border-color=#7cb7ffe6
 
 [urgency=critical]
-border-color=#f7768ee6
+border-color=#ff6c6be6
 default-timeout=0
 
 [app-name=Deezer]
-border-color=#bb9af7e6
+border-color=#c50ed2e6
 default-timeout=2000
 group-by=category
 
@@ -61,10 +61,10 @@ default-timeout=2000
 format=<b>%s</b>
 
 [app-name=control_volume group-index=0]
-invisible=false
+invisible=falsE
 
 [app-name=ws_switch_monitorRight]
-background-color=#565f8980
+background-color=#bb9af748
 width=50
 height=50
 margin=10
@@ -82,7 +82,7 @@ format=%s
 invisible=false
 
 [app-name=ws_switch_monitorLeft]
-background-color=#565f8980
+background-color=#bb9af748
 width=50
 height=50
 margin=10
