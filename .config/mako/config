@@ -61,7 +61,7 @@ default-timeout=2000
 format=<b>%s</b>
 
 [app-name=control_volume group-index=0]
-invisible=falsE
+invisible=false
 
 [app-name=ws_switch_monitorRight]
 background-color=#bb9af748
