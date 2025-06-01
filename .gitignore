@@ -98,12 +98,12 @@
 !.icons
 !.local/share/icons/
 !.local/share/icons/**
+.local/share/icons/hicolor
 
 # THEMES
 !.themes
 !.local/share/themes/
 !.local/share/themes/**
-.local/share/icons/hicolor
 
 ### Ignore specific files
 *.uuid

@@ -273,12 +273,12 @@ Create the following in `$HOME/.dotfiles/info/exclude` (or use a `.gitignore` if
 !.icons
 !.local/share/icons/
 !.local/share/icons/**
+.local/share/icons/hicolor
 
 # THEMES
 !.themes
 !.local/share/themes/
 !.local/share/themes/**
-.local/share/icons/hicolor
 
 ### Ignore specific files
 *.uuid
