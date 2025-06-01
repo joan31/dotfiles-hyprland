@@ -278,6 +278,7 @@ Create the following in `$HOME/.dotfiles/info/exclude` (or use a `.gitignore` if
 !.themes
 !.local/share/themes/
 !.local/share/themes/**
+.locah/share/icons/hicolor
 
 ### Ignore specific files
 *.uuid
