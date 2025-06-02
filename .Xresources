@@ -1,31 +1,31 @@
 ! Color Theme
-! Catppuccin Mocha
-*background: #1E1E2E
-*foreground: #CDD6F4
+! Sweet Dark
+*background: #1e1e2e
+*foreground: #c3c7d1
 ! black
-*color0: #45475A
-*color8: #585B70
+*color0: #1e1e2e
+*color8: #4b5263
 ! red
-*color1: #F38BA8
-*color9: #F38BA8
+*color1: #ff6c6b
+*color9: #ff6c6b
 ! green
-*color2: #A6E3A1
-*color10: #A6E3A1
+*color2: #9ece6a
+*color10: #9ece6a
 ! yellow
-*color3: #F9E2AF
-*color11: #F9E2AF
+*color3: #e6c384
+*color11: #e6c384
 ! blue
-*color4: #89B4FA
-*color12: #89B4FA
+*color4: #7aa2f7
+*color12: #7aa2f7
 ! magenta
-*color5: #F5C2E7
-*color13: #F5C2E7
+*color5: #bb9af7
+*color13: #bb9af7
 ! cyan
-*color6: #94E2D5
-*color14: #94E2D5
+*color6: #7dcfff
+*color14: #7dcfff
 ! white
-*color7: #BAC2DE
-*color15: #A6ADC8
+*color7: #eeeeec
+*color15: #ffffff
 
 ! Cursor
 Xcursor.theme: Bibata-Modern-Classic
