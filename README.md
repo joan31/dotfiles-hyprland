@@ -16,12 +16,13 @@ Personal dotfiles for my minimalist and keyboard-driven Wayland setup using **Hy
 - [🚀 Setup](#-setup)
 - [⚙️ Dotfiles Management](#️-dotfiles-management)
 - [📝 To-Do List](#-to-do-list)
+- [✅ Done](#-done)
 - [📄 License](#-license)
 
 ## 🧩 Features
 
 - 🚀 Wayland compositor: Hyprland
-- 🌈 Theming with [Sweet-Dark-v40](https://github.com/EliverLara/Sweet)
+- 🌈 Theming with [Sweet-Dark-v40](https://github.com/EliverLara/Sweet) & [Candy icons](https://github.com/EliverLara/candy-icons)
 - 🧱 Status bar: Waybar
 - 🖱️ Launcher: rofi-wayland
 - 🔊 Audio: PipeWire
@@ -40,7 +41,7 @@ dotfiles-hyprland/
 │   │   └── MangoHud.conf
 │   ├── foot/
 │   │   ├── themes/
-│   │   │   └── sweet-mars
+│   │   │   └── sweet-dark
 │   │   └── foot.ini
 │   ├── gtk-2.0/
 │   │   └── gtkfilechooser.ini
@@ -73,7 +74,7 @@ dotfiles-hyprland/
 │   │   └── hyprlock.png
 │   ├── mako/
 │   │   ├── themes/
-│   │   │   └── tokyo-night-storm.css
+│   │   │   └── sweet-dark.css
 │   │   └── config
 │   ├── mpv/
 │   │   ├── input.conf
@@ -82,15 +83,15 @@ dotfiles-hyprland/
 │   │   └── config
 │   ├── qt5ct/
 │   │   ├── colors/
-│   │   │   └── Sweet.conf
+│   │   │   └── sweet-dark.conf
 │   │   └── qt5ct.conf
 │   ├── qt6ct/
 │   │   ├── colors/
-│   │   │   └── Sweet.conf
+│   │   │   └── sweet-dark.conf
 │   │   └── qt6ct.conf
 │   ├── rofi/
 │   │   ├── themes/
-│   │   │   └── tokyo-night-storm.rasi
+│   │   │   └── sweet-dark.rasi
 │   │   └── config.rasi
 │   ├── swappy/
 │   │   └── config
@@ -99,7 +100,7 @@ dotfiles-hyprland/
 │   │   │   ├── bar_volume.sh
 │   │   │   └── mediaplayer.py
 │   │   ├── themes/
-│   │   │   └── tokyo-night-storm.css
+│   │   │   └── sweet-dark.css
 │   │   ├── config
 │   │   └── style.css
 │   ├── xsettingsd/
@@ -320,14 +321,28 @@ source ~/.zsshrc
 
 ## 📝 To-Do List
 
+### 🧩 Features
+
+- [ ] Add essential **Neovim** extensions (LSP, Telescope, Treesitter, etc.)
+- [ ] Create a custom **power/session menu** for Hyprland (logout, reboot, shutdown)
+- [ ] Integrate a clipboard manager for better copy/paste workflow (e.g. `cliphist`, `wl-clipboard`, or `clipman`)
+
 ### 🎨 Theming
 
 List of ongoing tasks to theme the Hyprland environment with the **Sweet Dark** look.
 
+- [ ] Apply Sweet Dark theme to **waybar**
+- [ ] Apply Sweet Dark theme to **btop**
+- [ ] Apply Sweet Dark theme to **cava**
+- [ ] Apply Sweet Dark theme to **neovim**
+
+---
+
+## ✅ Done
+
 - [x] Apply Sweet Dark theme to **hyprlock**
 - [x] Apply Sweet Dark theme to **mako**
 - [x] Apply Sweet Dark theme to **rofi**
-- [ ] Apply Sweet Dark theme to **waybar**
 
 ---
 
