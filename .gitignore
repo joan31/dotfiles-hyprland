@@ -27,6 +27,12 @@
 !.config/waybar/scripts/*
 !.config/waybar/themes/*
 
+# NEOVIM
+!.config/nvim/
+!.config/nvim/*
+!.config/nvim/lua/*
+!.config/nvim/lua/config/*
+
 # MAKO
 !.config/mako/
 !.config/mako/*
