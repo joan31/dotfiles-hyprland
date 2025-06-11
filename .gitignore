@@ -32,6 +32,8 @@
 !.config/nvim/*
 !.config/nvim/lua/*
 !.config/nvim/lua/config/*
+!.config/nvim/lua/plugins/*
+.config/nvim/lazy-lock.json
 
 # MAKO
 !.config/mako/
@@ -99,6 +101,7 @@
 !.local/share/fonts/OTF/**
 !.local/share/fonts/TTF/
 !.local/share/fonts/TTF/**
+*.uuid
 
 # ICONS
 !.icons
@@ -110,6 +113,3 @@
 !.themes
 !.local/share/themes/
 !.local/share/themes/**
-
-### Ignore specific files
-*.uuid
