@@ -81,6 +81,13 @@ dotfiles-hyprland/
 │   │   └── mpv.conf
 │   ├── nwg-look/
 │   │   └── config
+│   ├── nvim/
+│   │   ├── lua/
+│   │   │   ├── config/
+│   │   │   │   └── ...
+│   │   │   └── plugins/
+│   │   │       └── ...
+│   │   └── init.lua
 │   ├── qt5ct/
 │   │   ├── colors/
 │   │   │   └── sweet-dark.conf
@@ -129,7 +136,7 @@ dotfiles-hyprland/
 ├── .fonts/
 ├── .gitignore
 ├── .gtkrc-2.0
-├── .icons
+├── .icons/
 ├── .themes/
 ├── .zshrc
 ├── LICENSE
@@ -203,6 +210,14 @@ Create the following in `$HOME/.dotfiles/info/exclude` (or use a `.gitignore` if
 !.config/waybar/scripts/*
 !.config/waybar/themes/*
 
+# NEOVIM
+!.config/nvim/
+!.config/nvim/*
+!.config/nvim/lua/*
+!.config/nvim/lua/config/*
+!.config/nvim/lua/plugins/*
+.config/nvim/lazy-lock.json
+
 # MAKO
 !.config/mako/
 !.config/mako/*
@@ -269,6 +284,7 @@ Create the following in `$HOME/.dotfiles/info/exclude` (or use a `.gitignore` if
 !.local/share/fonts/OTF/**
 !.local/share/fonts/TTF/
 !.local/share/fonts/TTF/**
+*.uuid
 
 # ICONS
 !.icons
@@ -280,9 +296,6 @@ Create the following in `$HOME/.dotfiles/info/exclude` (or use a `.gitignore` if
 !.themes
 !.local/share/themes/
 !.local/share/themes/**
-
-### Ignore specific files
-*.uuid
 ```
 
 </details>
