@@ -31,8 +31,11 @@
 !.config/nvim/
 !.config/nvim/*
 !.config/nvim/lua/*
+!.config/nvim/lua/colors/*
 !.config/nvim/lua/config/*
+!.config/nvim/lua/core/*
 !.config/nvim/lua/plugins/*
+!.config/nvim/lua/utils/*
 .config/nvim/lazy-lock.json
 
 # MAKO

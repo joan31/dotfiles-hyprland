@@ -1,10 +1,10 @@
 return {
   {
-    "nvim-tree/nvim-tree.lua",
+    "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    event = "VeryLazy",
+    event = "VimEnter",
     config = function()
-      require("config.nvimtree")
+      require("config.lualine")
     end
   }
 }

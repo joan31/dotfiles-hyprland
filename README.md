@@ -347,7 +347,7 @@ List of ongoing tasks to theme the Hyprland environment with the **Sweet Dark** 
 - [ ] Apply Sweet Dark theme to **waybar**
 - [ ] Apply Sweet Dark theme to **btop**
 - [ ] Apply Sweet Dark theme to **cava**
-- [ ] Apply Sweet Dark theme to **neovim**
+- [x] Apply Sweet Dark theme to **neovim**
 
 ---
 

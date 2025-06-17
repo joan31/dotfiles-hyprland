@@ -1,2 +1,22 @@
-require("nvim-tree").setup({})
-vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+require("nvim-tree").setup {
+  view = {
+    width = 30,
+    side = "left",
+    relativenumber = false,
+  },
+  renderer = {
+    icons = {
+      glyphs = {
+        default = "",
+        symlink = "",
+        folder = {
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+        },
+      },
+    },
+  },
+}
