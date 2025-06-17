@@ -336,7 +336,7 @@ source ~/.zsshrc
 
 ### 🧩 Features
 
-- [ ] Add essential **Neovim** extensions (LSP, Telescope, Treesitter, etc.)
+- [x] Add essential **Neovim** extensions (LSP, Telescope, Treesitter, etc.)
 - [ ] Create a custom **power/session menu** for Hyprland (logout, reboot, shutdown)
 - [ ] Integrate a clipboard manager for better copy/paste workflow (e.g. `cliphist`, `wl-clipboard`, or `clipman`)
 
