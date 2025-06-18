@@ -83,9 +83,15 @@ dotfiles-hyprland/
 │   │   └── config
 │   ├── nvim/
 │   │   ├── lua/
+│   │   │   ├── colors/
+│   │   │   │   └── ...
 │   │   │   ├── config/
 │   │   │   │   └── ...
-│   │   │   └── plugins/
+│   │   │   ├── core/
+│   │   │   │   └── ...
+│   │   │   ├── plugins/
+│   │   │   │   └── ...
+│   │   │   └── utils/
 │   │   │       └── ...
 │   │   └── init.lua
 │   ├── qt5ct/
@@ -214,8 +220,11 @@ Create the following in `$HOME/.dotfiles/info/exclude` (or use a `.gitignore` if
 !.config/nvim/
 !.config/nvim/*
 !.config/nvim/lua/*
+!.config/nvim/lua/colors/*
 !.config/nvim/lua/config/*
+!.config/nvim/lua/core/*
 !.config/nvim/lua/plugins/*
+!.config/nvim/lua/utils/*
 .config/nvim/lazy-lock.json
 
 # MAKO
@@ -336,7 +345,6 @@ source ~/.zsshrc
 
 ### 🧩 Features
 
-- [x] Add essential **Neovim** extensions (LSP, Telescope, Treesitter, etc.)
 - [ ] Create a custom **power/session menu** for Hyprland (logout, reboot, shutdown)
 - [ ] Integrate a clipboard manager for better copy/paste workflow (e.g. `cliphist`, `wl-clipboard`, or `clipman`)
 
@@ -347,7 +355,6 @@ List of ongoing tasks to theme the Hyprland environment with the **Sweet Dark** 
 - [ ] Apply Sweet Dark theme to **waybar**
 - [ ] Apply Sweet Dark theme to **btop**
 - [ ] Apply Sweet Dark theme to **cava**
-- [x] Apply Sweet Dark theme to **neovim**
 
 ---
 
@@ -356,6 +363,8 @@ List of ongoing tasks to theme the Hyprland environment with the **Sweet Dark** 
 - [x] Apply Sweet Dark theme to **hyprlock**
 - [x] Apply Sweet Dark theme to **mako**
 - [x] Apply Sweet Dark theme to **rofi**
+- [x] Apply Sweet Dark theme to **neovim**
+- [x] Add essential **Neovim** extensions (LSP, Telescope, Treesitter, etc.)
 
 ---
 
