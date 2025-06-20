@@ -347,6 +347,7 @@ source ~/.zsshrc
 
 - [ ] Create a custom **power/session menu** for Hyprland (logout, reboot, shutdown)
 - [ ] Integrate a clipboard manager for better copy/paste workflow (e.g. `cliphist`, `wl-clipboard`, or `clipman`)
+- [ ] Fastfetch custom preset
 
 ### 🎨 Theming
 
