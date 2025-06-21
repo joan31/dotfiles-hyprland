@@ -346,8 +346,8 @@ source ~/.zsshrc
 ### 🧩 Features
 
 - [ ] Create a custom **power/session menu** for Hyprland (logout, reboot, shutdown)
-- [ ] Integrate a clipboard manager for better copy/paste workflow (e.g. `cliphist`, `wl-clipboard`, or `clipman`)
 - [ ] Fastfetch custom preset
+- [ ] Add **hyprshot** recommended package for screenshots for Hyprland
 
 ### 🎨 Theming
 
@@ -365,7 +365,8 @@ List of ongoing tasks to theme the Hyprland environment with the **Sweet Dark** 
 - [x] Apply Sweet Dark theme to **mako**
 - [x] Apply Sweet Dark theme to **rofi**
 - [x] Apply Sweet Dark theme to **neovim**
-- [x] Add essential **Neovim** extensions (LSP, Telescope, Treesitter, etc.)
+- [x] Add essential **neovim** extensions (LSP, Telescope, Treesitter, etc.)
+- [x] Integrate a clipboard manager **cliphist** for better copy/paste workflow
 
 ---
 
