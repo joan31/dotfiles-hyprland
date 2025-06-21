@@ -46,6 +46,7 @@
 # ROFI
 !.config/rofi/
 !.config/rofi/*
+!.config/rofi/scripts/*
 !.config/rofi/themes/*
 
 # FOOT

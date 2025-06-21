@@ -1,5 +1,5 @@
 configuration {
-	modi: "run,drun,window";
+	modi: "run,drun,window,clipboard:~/.config/rofi/scripts/cliphist-rofi.sh";
 	show-icons: true;
 	terminal: "footclient";
 	drun-display-format: "{icon} {name}";
@@ -9,6 +9,7 @@ configuration {
 	display-drun: "   Apps ";
 	display-run: "   Run ";
 	display-window: "   Windows ";
+  display-clipboard: "   Clipboard ";
 	sidebar-mode: true;
 }
 

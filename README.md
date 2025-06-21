@@ -103,6 +103,8 @@ dotfiles-hyprland/
 │   │   │   └── sweet-dark.conf
 │   │   └── qt6ct.conf
 │   ├── rofi/
+│   │   ├── scripts/
+│   │   │   └── cliphist-rofi.sh
 │   │   ├── themes/
 │   │   │   └── sweet-dark.rasi
 │   │   └── config.rasi
@@ -235,6 +237,7 @@ Create the following in `$HOME/.dotfiles/info/exclude` (or use a `.gitignore` if
 # ROFI
 !.config/rofi/
 !.config/rofi/*
+!.config/rofi/scripts/*
 !.config/rofi/themes/*
 
 # FOOT
@@ -367,6 +370,7 @@ List of ongoing tasks to theme the Hyprland environment with the **Sweet Dark** 
 - [x] Apply Sweet Dark theme to **neovim**
 - [x] Add essential **neovim** extensions (LSP, Telescope, Treesitter, etc.)
 - [x] Integrate a clipboard manager **cliphist** for better copy/paste workflow
+- [x] Clipboard integration to **rofi** menu
 
 ---
 
