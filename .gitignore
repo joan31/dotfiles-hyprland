@@ -54,6 +54,10 @@
 !.config/foot/*
 !.config/foot/themes/*
 
+# FASTFETCH
+!.config/fastfetch/
+!.config/fastfetch/*
+
 # MANGOHUD
 !.config/MangoHud/
 !.config/MangoHud/*
