@@ -39,6 +39,12 @@ dotfiles-hyprland/
 ├── .config/
 │   ├── MangoHud/
 │   │   └── MangoHud.conf
+│   ├── fastfetch/
+│   │   ├── arch_linux_logo.png
+│   │   ├── arch_linux_logo.sixel
+│   │   ├── arch_linux_manga.png
+│   │   ├── arch_linux_manga.sixel
+│   │   └── config.jsonc
 │   ├── foot/
 │   │   ├── themes/
 │   │   │   └── sweet-dark
@@ -245,6 +251,10 @@ Create the following in `$HOME/.dotfiles/info/exclude` (or use a `.gitignore` if
 !.config/foot/*
 !.config/foot/themes/*
 
+# FASTFETCH
+!.config/fastfetch/
+!.config/fastfetch/*
+
 # MANGOHUD
 !.config/MangoHud/
 !.config/MangoHud/*
@@ -349,7 +359,6 @@ source ~/.zsshrc
 ### 🧩 Features
 
 - [ ] Create a custom **power/session menu** for Hyprland (logout, reboot, shutdown)
-- [ ] Fastfetch custom preset
 - [ ] Add **hyprshot** recommended package for screenshots for Hyprland
 
 ### 🎨 Theming
@@ -371,6 +380,7 @@ List of ongoing tasks to theme the Hyprland environment with the **Sweet Dark** 
 - [x] Add essential **neovim** extensions (LSP, Telescope, Treesitter, etc.)
 - [x] Integrate a clipboard manager **cliphist** for better copy/paste workflow
 - [x] Clipboard integration to **rofi** menu
+- [x] Fastfetch custom preset
 
 ---
 
