@@ -16,9 +16,17 @@
 !.zshrc
 !.zsh_aliases
 
+# MIME
+!.config/mimeapps.list
+
 # BAT
 !.config/bat/
 !.config/bat/*
+
+# BTOP
+!.config/btop/
+!.config/btop/*
+!.config/btop/themes/*
 
 # LF
 !.config/lf/

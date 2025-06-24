@@ -37,8 +37,11 @@ Personal dotfiles for my minimalist and keyboard-driven Wayland setup using **Hy
 ```bash
 dotfiles-hyprland/
 ├── .config/
-│   ├── MangoHud/
-│   │   └── MangoHud.conf
+│   ├── bat/
+│   │   └── config
+│   ├── btop/
+│   │   ├── themes/
+│   │   └── btop.conf
 │   ├── fastfetch/
 │   │   ├── arch_linux_logo.png
 │   │   ├── arch_linux_logo.sixel
@@ -78,10 +81,17 @@ dotfiles-hyprland/
 │   │   ├── hyprland.conf
 │   │   ├── hyprlock.conf
 │   │   └── hyprlock.png
+│   ├── lf/
+│   │   ├── colors
+│   │   ├── icons
+│   │   ├── lfrc
+│   │   └── previewer.sh
 │   ├── mako/
 │   │   ├── themes/
 │   │   │   └── sweet-dark.css
 │   │   └── config
+│   ├── MangoHud/
+│   │   └── MangoHud.conf
 │   ├── mpv/
 │   │   ├── input.conf
 │   │   └── mpv.conf
@@ -128,7 +138,8 @@ dotfiles-hyprland/
 │   │   └── xsettingsd.conf
 │   ├── electron-flags.conf
 │   ├── electron13-flags.conf
-│   └── electron19-flags.conf
+│   ├── electron19-flags.conf
+│   └── mimeapps.list
 ├── .local/
 │   ├── bin/
 │   └── share/
@@ -211,6 +222,9 @@ Create the following in `$HOME/.dotfiles/info/exclude` (or use a `.gitignore` if
 
 # SHELL
 !.zshrc
+
+# MIME
+!.config/mimeapps.list
 
 # HYPRLAND
 !.config/hypr/
@@ -360,6 +374,9 @@ source ~/.zsshrc
 
 - [ ] Create a custom **power/session menu** for Hyprland (logout, reboot, shutdown)
 - [ ] Add **hyprshot** recommended package for screenshots for Hyprland
+- [ ] Function to clean **rofi** and **cliphist** clipboard
+- [ ] Bluetooth integration to **rofi**
+- [ ] Add a more complete calendar to **waybar**
 
 ### 🎨 Theming
 
@@ -386,6 +403,7 @@ List of ongoing tasks to theme the Hyprland environment with the **Sweet Dark** 
 - [x] Special zsh aliases **lsd**, **bat**, **colordiff**, **less**, **tree**, **grep**, **egrep**, **fgrep** and **vim**
 - [x] Colorized man pages
 - [x] **lf** (CLI file manager) config with sixel support 
+- [x] Add config file for mime applications `~/.config/mimeapps.list`
 
 ---
 
