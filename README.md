@@ -377,6 +377,7 @@ source ~/.zsshrc
 - [ ] Function to clean **rofi** and **cliphist** clipboard
 - [ ] Bluetooth integration to **rofi**
 - [ ] Add a more complete calendar to **waybar**
+- [ ] Update **MangoHud** with a beautiful horizontal hud in games
 
 ### 🎨 Theming
 
