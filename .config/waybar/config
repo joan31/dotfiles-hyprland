@@ -81,8 +81,7 @@
 		"on-click-right": "killall btop"
 	},
 	"temperature": {
-		"hwmon-path-abs": "/sys/devices/platform/asus-ec-sensors/hwmon",
-		"input-filename": "temp2_input",
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
 		"critical-threshold": 80,
 		"format-critical": "{icon} {temperatureC}°C",
 		"format": "{icon} {temperatureC}°C",
