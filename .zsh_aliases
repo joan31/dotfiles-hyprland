@@ -1,0 +1,58 @@
+# Common aliases
+define_common_aliases() {
+  # Git alias to manage dotfiles using a bare repository setup
+  if [[ -d "$HOME/.dotfiles" ]]; then
+    alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+  fi
+
+  # Vim to nvim
+  alias vim='nvim'
+
+  # Bat modern replacement for cat with syntax highlighting
+  alias cat='bat'
+
+  # Colordiff more readable output for diff
+  alias diff='colordiff'
+
+  # Grep with colored output
+  alias grep='grep --color=auto'
+  alias egrep='egrep --color=auto'
+  alias fgrep='fgrep --color=auto'
+
+  # Tree with color support
+  alias tree='tree -C'
+
+  # Less enable raw color support
+  alias less='less -R'
+  export LESS='-R'
+
+  # Colorized man pages
+  export LESS_TERMCAP_mb=$'\e[1;31m'
+  export LESS_TERMCAP_md=$'\e[1;36m'
+  export LESS_TERMCAP_me=$'\e[0m'
+  export LESS_TERMCAP_se=$'\e[0m'
+  export LESS_TERMCAP_so=$'\e[1;44;33m'
+  export LESS_TERMCAP_ue=$'\e[0m'
+  export LESS_TERMCAP_us=$'\e[1;32m'
+}
+
+# TTY aliases
+define_tty_aliases() {
+  alias ls='lsd --icon never'  # Icons disabled in TTY with lsd
+  alias nvim="XDG_CONFIG_HOME= /usr/bin/nvim"  # Prevent Neovim from reading graphical config paths in TTY
+  alias fastfetch="fastfetch -c neofetch.jsonc"  # Fastfetch with default config in TTY
+}
+
+# Graphical aliases
+define_gui_aliases() {
+  alias ls='lsd'  # Default with icons in graphical shells
+}
+
+# Main
+define_common_aliases  # Shared aliases
+
+if [[ "$TERM" == "linux" ]]; then
+  define_tty_aliases
+else
+  define_gui_aliases
+fi

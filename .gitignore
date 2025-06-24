@@ -14,6 +14,15 @@
 
 # SHELL
 !.zshrc
+!.zsh_aliases
+
+# BAT
+!.config/bat/
+!.config/bat/*
+
+# LF
+!.config/lf/
+!.config/lf/*
 
 # HYPRLAND
 !.config/hypr/

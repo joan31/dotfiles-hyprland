@@ -368,6 +368,8 @@ List of ongoing tasks to theme the Hyprland environment with the **Sweet Dark** 
 - [ ] Apply Sweet Dark theme to **waybar**
 - [ ] Apply Sweet Dark theme to **btop**
 - [ ] Apply Sweet Dark theme to **cava**
+- [ ] Apply Sweet Dark theme to **lsd**
+- [ ] Apply Sweet Dark theme to **bat**
 
 ---
 
@@ -380,7 +382,10 @@ List of ongoing tasks to theme the Hyprland environment with the **Sweet Dark** 
 - [x] Add essential **neovim** extensions (LSP, Telescope, Treesitter, etc.)
 - [x] Integrate a clipboard manager **cliphist** for better copy/paste workflow
 - [x] Clipboard integration to **rofi** menu
-- [x] Fastfetch custom preset
+- [x] **fastfetch** custom preset
+- [x] Special zsh aliases **lsd**, **bat**, **colordiff**, **less**, **tree**, **grep**, **egrep**, **fgrep** and **vim**
+- [x] Colorized man pages
+- [x] **lf** (CLI file manager) config with sixel support 
 
 ---
 

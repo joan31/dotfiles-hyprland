@@ -47,11 +47,6 @@ common_setup() {
 
 	# Enable timestamp in command history (visible with `history`)
 	HIST_STAMPS="yyyy-mm-dd"
-
-	# Git alias to manage dotfiles using a bare repository setup
-	if [[ -d "$HOME/.dotfiles" ]]; then
-		alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-	fi
 }
 
 # Setup for graphical shell
@@ -86,8 +81,6 @@ setup_tty_shell() {
 	plugins=(archlinux git)
 
 	# Aliases
-	alias nvim="XDG_CONFIG_HOME= /usr/bin/nvim"  # Prevent Neovim from reading graphical config paths in TTY
-  alias fastfetch="fastfetch -c neofetch.jsonc"  # Fastfetch with default config in TTY
 }
 
 # Main
@@ -102,3 +95,6 @@ fi
 
 # Initialize oh-my-zsh
 source "$ZSH/oh-my-zsh.sh"
+
+# Custom aliases
+source "$HOME/.zsh_aliases"
