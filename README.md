@@ -91,7 +91,7 @@ dotfiles-hyprland/
 │   │   │   └── sweet-dark.css
 │   │   └── config
 │   ├── MangoHud/
-│   │   └── MangoHud.conf
+│   │   └── presets.conf
 │   ├── mpv/
 │   │   ├── input.conf
 │   │   └── mpv.conf
@@ -377,7 +377,6 @@ source ~/.zsshrc
 - [ ] Function to clean **rofi** and **cliphist** clipboard
 - [ ] Bluetooth integration to **rofi**
 - [ ] Add a more complete calendar to **waybar**
-- [ ] Update **MangoHud** with a beautiful horizontal hud in games
 
 ### 🎨 Theming
 
@@ -405,6 +404,8 @@ List of ongoing tasks to theme the Hyprland environment with the **Sweet Dark** 
 - [x] Colorized man pages
 - [x] **lf** (CLI file manager) config with sixel support 
 - [x] Add config file for mime applications `~/.config/mimeapps.list`
+- [x] Update **MangoHud** with a beautiful horizontal hud in games
+- [x] Add **MangoHud** presets
 
 ---
 
