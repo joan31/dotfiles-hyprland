@@ -1,0 +1,11 @@
+#!/bin/bash
+# Usage: set this script as the Steam launch option, e.g. "gamerun32_ogl %command%"
+# It runs the opengl game with gamemoderun, MangoHud, and Steam overlay
+
+DISPLAY_SERVER="x11"
+OVERLAY_SO="$HOME/.local/share/Steam/ubuntu12_32/gameoverlayrenderer.so"
+GAMEMODE_SO="/usr/lib32/libgamemode.so"
+MANGOHUD_SO="/usr/lib32/mangohud/libMangoHud_opengl.so"
+
+exec gamemoderun mangohud \
+  env SDL_VIDEODRIVER="$DISPLAY_SERVER" LD_PRELOAD="$OVERLAY_SO:$GAMEMODE_SO:$MANGOHUD_SO" "$@"

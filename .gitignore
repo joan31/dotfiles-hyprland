@@ -10,7 +10,11 @@
 ## CONFIGS
 !.config/
 !.local/
+!.local/bin/
 !.local/share/
+
+# SCRIPTS
+!.local/bin/*
 
 # SHELL
 !.zshrc

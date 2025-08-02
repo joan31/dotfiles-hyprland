@@ -1,0 +1,27 @@
+#!/bin/bash
+# Usage: set this script as the Steam launch option, e.g. "gamerun64_fsr %command%"
+# It runs the game inside gamescope with gamemode, FSR, MangoHud, adaptive-sync and Steam overlay.
+
+# === Internal resolution and output resolution ===
+INTERNAL_RES="1600x900"
+OUTPUT_RES="1920x1080"
+REFRESH_RATE="144"
+FSR_SHARPNESS="2"
+
+# === Libraries to preload (colon-separated) ===
+OVERLAY_SO="$HOME/.local/share/Steam/ubuntu12_64/gameoverlayrenderer.so"
+GAMEMODE_SO="/usr/lib/libgamemode.so"
+
+# === Run the game with gamemoderun, gamescope and env variables ===
+exec gamemoderun gamescope \
+  -w ${INTERNAL_RES%x*} -h ${INTERNAL_RES#*x} \
+  -r $REFRESH_RATE \
+  -W ${OUTPUT_RES%x*} -H ${OUTPUT_RES#*x} \
+  -f \
+  --force-grab-cursor \
+  -F fsr \
+  --fsr-sharpness $FSR_SHARPNESS \
+  --backend sdl \
+  --mangoapp \
+  --adaptive-sync \
+  -- env LD_PRELOAD="$OVERLAY_SO:$GAMEMODE_SO" "$@"

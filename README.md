@@ -142,6 +142,7 @@ dotfiles-hyprland/
 │   └── mimeapps.list
 ├── .local/
 │   ├── bin/
+│   │   └── ...
 │   └── share/
 │       ├── fonts/
 │       │   ├── OTF/
@@ -218,13 +219,31 @@ Create the following in `$HOME/.dotfiles/info/exclude` (or use a `.gitignore` if
 ## CONFIGS
 !.config/
 !.local/
+!.local/bin/
 !.local/share/
+
+# SCRIPTS
+!.local/bin/*
 
 # SHELL
 !.zshrc
+!.zsh_aliases
 
 # MIME
 !.config/mimeapps.list
+
+# BAT
+!.config/bat/
+!.config/bat/*
+
+# BTOP
+!.config/btop/
+!.config/btop/*
+!.config/btop/themes/*
+
+# LF
+!.config/lf/
+!.config/lf/*
 
 # HYPRLAND
 !.config/hypr/

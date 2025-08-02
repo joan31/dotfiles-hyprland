@@ -1,0 +1,10 @@
+#!/bin/bash
+# Usage: set this script as the Steam launch option, e.g. "gamerun64_prowl %command%"
+# It runs the game with gamemoderun, MangoHud, and Steam overlay
+
+WAYLAND_WINE="1"
+OVERLAY_SO="$HOME/.local/share/Steam/ubuntu12_64/gameoverlayrenderer.so"
+GAMEMODE_SO="/usr/lib/libgamemode.so"
+
+exec gamemoderun mangohud \
+  env PROTON_ENABLE_WAYLAND="$WAYLAND_WINE" LD_PRELOAD="$OVERLAY_SO:$GAMEMODE_SO" "$@"
