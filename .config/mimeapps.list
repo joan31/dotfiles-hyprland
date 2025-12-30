@@ -17,3 +17,6 @@ image/x-tga=imv.desktop
 image/x-xbitmap=imv.desktop
 image/heif=imv.desktop
 image/avif=imv.desktop
+
+[Added Associations]
+application/pdf=firefox.desktop;
