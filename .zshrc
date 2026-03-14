@@ -22,7 +22,7 @@ menu_start() {
 			case $choice in
 				h|H)
 					echo "-> Launching Hyprland..."
-					exec hyprland
+					exec start-hyprland 
 					;;
 				s|S|'')
 					echo "-> Staying in shell."
